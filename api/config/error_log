@@ -1,0 +1,2 @@
+[04-Aug-2021 02:56:50 America/Mexico_City] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'username'@'localhost' (using password: YES) in /home3/amantoli/api.amantoli.com.mx/WS/api/config/database.php on line 7
+[04-Aug-2021 02:57:47 America/Mexico_City] PHP Parse error:  syntax error, unexpected '$servername' (T_VARIABLE), expecting function (T_FUNCTION) or const (T_CONST) in /home3/amantoli/api.amantoli.com.mx/WS/api/config/database.php on line 26
