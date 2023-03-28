@@ -5,6 +5,7 @@ class Conexion
     public $database_name = "bordados.";
     public $col_users = "usuarios";
     public $col_categories = "categories";
+    public $col_products = "products";
 
     public function conectar()
     {
