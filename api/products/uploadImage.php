@@ -10,7 +10,7 @@
             $imagen = $params->base64textString;
             $imagen = base64_decode($imagen);
             try {
-                $filePath = $_SERVER['DOCUMENT_ROOT']."/bordados_app_backend/api/products/imageProducts/".$nombreArchivo;
+                $filePath = $_SERVER['DOCUMENT_ROOT']."/api/products/imageProducts/".$nombreArchivo;
                 file_put_contents($filePath, $imagen);
                 $jsonData= '[
                     {"response":"ok"},
