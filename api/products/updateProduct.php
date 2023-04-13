@@ -12,10 +12,11 @@ class query extends Conexion {
         $precio = $_GET['precio'];
         $image = $_GET['imageUrl'];
         $talla = $_GET['talla'];
+        $tags = strtolower($description);
         try {
             $conexion = parent::conectar();
             $query = new MongoDB\Driver\BulkWrite;
-            $query->update(['_id' => new MongoDB\BSON\ObjectID($id)], ['$set' => ['title'=>$title, 'description'=>$description, 'categorySex'=>$sex, 'marca'=>$marca, 'precio'=>$precio, 'categoryID'=>$categoryID, 'imageUrl'=>$image, 'talla'=>$talla]]);
+            $query->update(['_id' => new MongoDB\BSON\ObjectID($id)], ['$set' => ['title'=>$title, 'description'=>$description, 'categorySex'=>$sex, 'marca'=>$marca, 'precio'=>floatval($precio), 'categoryID'=>$categoryID, 'imageUrl'=>$image, 'talla'=>$talla, 'tags' => $tags]]);
             $conexion->executeBulkWrite($this->database_name.$this->col_products, $query);
         } catch (\Throwable $th) {
             return $th->getMessage();
