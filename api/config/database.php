@@ -6,7 +6,8 @@ class Conexion
     public $col_users = "users";
     public $col_categories = "categories";
     public $col_products = "products";
-    // $cadenaAnterior =  "mongodb+srv://user_all_privileges:pwd_mongodb@cluster0.vrmzrp9.mongodb.net/?retryWrites=true&w=majority";
+    public $col_dumps = "dumps";
+    public $col_restorations = "restorations";
 
     public function conectar()
     {
