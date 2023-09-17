@@ -8,6 +8,8 @@ class Conexion
     public $col_products = "products";
     public $col_dumps = "dumps";
     public $col_restorations = "restorations";
+    public $col_sales = "sales";
+    public $col_addresses = "addresses";
 
     public function conectar()
     {
