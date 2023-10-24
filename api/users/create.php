@@ -7,7 +7,7 @@ class query extends Conexion {
         try {
             $conexion = parent::conectar();
             $query = new MongoDB\Driver\BulkWrite;
-            $query->insert(['email'=>$email]);
+            $query->insert(['email'=>$email, 'verificationCode'=> rand(100000, 999999)]);
             $conexion->executeBulkWrite($this->database_name.$this->col_users, $query);
         } catch (\Throwable $th) {
             return $th->getMessage();
