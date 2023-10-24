@@ -10,6 +10,7 @@ class Conexion
     public $col_restorations = "restorations";
     public $col_sales = "sales";
     public $col_addresses = "addresses";
+    public $col_carts = "carts";
 
     public function conectar()
     {
