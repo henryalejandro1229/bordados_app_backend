@@ -11,6 +11,7 @@ class Conexion
     public $col_sales = "sales";
     public $col_addresses = "addresses";
     public $col_carts = "carts";
+    public $col_favorites = "favorites";
 
     public function conectar()
     {
